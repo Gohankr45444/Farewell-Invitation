@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitation Card</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px 2px rgba(41, 111, 161, 0.313);
+      overflow: hidden;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .card-header {
+      background-color: #3498db;
+      color: #fff;
+      padding: 2px;
+      text-align: center;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .invitation-text {
+      line-height: 1.6;
+    }
+
+    .footer {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+        <h2>SAMSTHITA</h2>
+        <h5>FAREWELL PARTY</h5>
+    </div>
+    <div class="card-body">
+        <script>
+            var submittedName = localStorage.getItem('submittedName');
+            if (submittedName) {
+                document.write("<p class='invitation-text'> Our dear <span style='font-style: italic; font-weight: bold; color: rgb(39, 39, 39); '>" + submittedName + "</span>, as you prepare to leave us, we want to show you how much you will be missed.");
+                document.write("Please join us for a farewell party filled with love, laughter, and lots of memories.</p>");
+                document.write("<p class='invitation-text'>Date: December 04 and 05 2023</p>");
+                document.write("<p class='invitation-text'>Time: 10:00 AM</p>");
+                document.write("<p class='invitation-text'>Location: MAHARANI CLUSTER UNIVERSITY</p>");
+            } else {
+                // If name is not available, redirect to mca.html
+                window.location.href = 'mca.html';
+            }
+        </script>
+    </div>
+    <div class="footer">
+        <p>BY YOUR SWEET LITTLE JUNIORS</p>
+    </div>
+</div>
+</body>
+</html>
